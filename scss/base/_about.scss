@@ -1,0 +1,59 @@
+/* **************** */
+/* *  ABOUT PAGE  * */
+/* **************** */
+
+.c-about h2 {
+    font-family: $font-secondary;
+}
+
+.c-about {
+    padding: 2rem;
+    
+}
+
+/* SOFT ZOOM EFFECT FOR IMAGES */
+.interactable {
+    overflow: hidden;
+    background-color: $dark;
+    border-radius: 1rem;
+    
+}
+.interactable img {
+    transform: scale(1.2);
+    background-position: center;
+    transition: all 0.2s ease-in-out;    
+}
+.interactable:hover img {
+    transform: scale(1.3);
+    filter: brightness(140%);
+}
+
+.c-about-s2 {
+    height: 15rem;
+    align-items: center;
+    position:relative;
+    overflow: hidden;
+}
+
+.gradient-background{
+    background:
+        linear-gradient(red, transparent),
+        linear-gradient(to top left, lime, transparent),
+        linear-gradient(to top right, blue, transparent);
+    background-blend-mode: screen;
+}
+
+/* ALTERNATIVE TITLE EFFECT */
+.video-bg {
+    position:absolute; 
+    min-width:100%;
+    min-height:100%;
+    mix-blend-mode:luminosity;
+}
+
+/* FIXED BACKGROUND PARAGRAPH */
+.c-about-s4 {
+    background-image: url("../images/about-4.png");
+    background-size: cover;
+    background-attachment: fixed;
+}

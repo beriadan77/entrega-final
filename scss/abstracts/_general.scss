@@ -1,0 +1,140 @@
+
+/* GENERAL TWEAKS */
+
+body {
+    background-color: $secondary;
+    background: $font-secondary;
+    font-family: $font-primary;
+}
+
+.spacer {
+    width:100%; 
+    min-height:1px; 
+    margin-top:100px;
+    display:inline-block; 
+    position:relative;
+}
+
+/* NAV BAR */
+.navbar {
+    box-shadow: 0 2px 20px 0 $dark;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    margin: 1rem 1rem 1rem;
+    border-radius: 1rem;
+    border: 2px solid $primary;
+}
+
+.darkener {
+    // Darkens the nav-bar, as the blur filter is not compatible 
+    // with the brightness one and they cancel each other.
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    background: linear-gradient(rgba($color: $dark, $alpha: 0.8),rgba($color: $dark, $alpha: 0.5));
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: $light;
+    font-size: 1rem;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: $success;
+}
+
+.navbar-brand {
+    font-family: $font-secondary;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    color: $success;
+}
+
+
+/* FOOTER */
+
+footer{
+    background-color: $secondary;
+    padding: 1rem;
+
+    h5 {
+        font-family: $font-secondary;
+        font-size: 1.2rem;
+        letter-spacing: 3px;
+        color: $primary;
+    }
+}
+
+.c-footer-links {
+    color: $light;
+
+    &:hover {
+        color: $success;
+    }
+}
+
+
+.modal-content {
+    background-color: $secondary;
+}
+
+.btn-floating {
+    i {
+        background-color: $secondary;
+
+        color: $light;
+        
+        &:hover {
+            color: $success;
+        }
+    }   
+}
+
+.form-control {
+    background-color: $light;
+    color: $dark;
+
+    &:focus {
+        background-color: $primary;
+        color: $dark;
+        border-color: $primary;
+    }
+}
+
+.btn-danger {
+    background-color: $dark;
+    border-color: $dark;
+    color: $light;
+
+    &:hover {
+        background-color: $dark;
+        border-color: $primary;
+    }
+}
+
+.btn-primary {
+    font-family: $font-secondary;
+    cursor: pointer;
+    color: $secondary;
+    font-size: 1.1rem;
+    background-color: $light;
+    padding: 0.6em 2em 0.5em 2em;
+    border: 0;
+    border-radius: 1.25rem;
+    transition: all 0.4s ease-in-out;
+
+    &:hover {
+        background-color: $success;
+        color: $dark;
+        letter-spacing: 3px;
+    }
+    &:active {
+        background-color: $secondary!important;
+    }
+
+}
+
+

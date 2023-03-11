@@ -1,0 +1,112 @@
+/* **************** */
+/* *     HOME     * */
+/* **************** */
+
+.c-home-s2 {
+    background: $secondary;
+}
+
+.c-home-s3 {
+    position: relative;
+    isolation: isolate;
+    height: 15rem;
+    align-items: center;
+}
+
+.c-dream-t {
+    font-weight: bold;
+    color: $secondary;
+    mix-blend-mode:soft-light;
+}
+
+/* CAROUSEL ANIM */
+.carousel-inner .carousel-item > img {
+    object-fit: cover;
+    // FIXES FOR HERO IMAGE
+    @media screen and (max-width: 769px) {min-height:650px;}
+    @media screen and (max-width: 481px) {min-height:500px;}
+    animation: zoomin 20s ease-in-out infinite;
+    
+}
+@keyframes zoomin {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+
+    }
+}
+
+/* HOME ACCORDIONS CUSTOMIZATION */
+.accordion-header {
+    font-family: $font-secondary;
+}
+
+.accordion-button {
+    background-color: $secondary!important;
+    color: $primary!important;
+}
+
+.accordion-item {
+    border-color: $light;
+}
+
+.accordion-body {
+    background-color: $dark!important;
+    color: $success!important; 
+    
+}
+
+// MARKEE
+
+/* animations */
+@-webkit-keyframes marquee {
+from {
+    transform: translateX(0);
+}
+to {
+    transform: translateX(-100%);
+}
+}
+@keyframes marquee {
+from {
+    transform: translateX(7%);
+}
+to {
+    transform: translateX(-100%);
+}
+}
+@keyframes color-change {
+    0%,100% { color: $primary; }
+    30%,80% { color: #fff }
+  }
+
+/* scroller styles */
+.marquee {
+    animation: color-change 1s infinite;
+    font-size: 4rem;
+    height: 6rem;
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+}
+.track {
+    height: 100%;
+    overflow: hidden;
+    padding: 0rem 0;
+    position: absolute;
+    transition: background-color 300ms ease, color 300ms ease;
+    white-space: nowrap;
+
+    .text {
+        -webkit-animation: marquee 50000ms linear infinite;
+        animation: marquee 50000ms linear infinite;
+        align-items: center;
+        display: inline-flex;
+        will-change: transform;
+    }
+}

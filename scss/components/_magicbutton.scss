@@ -1,0 +1,60 @@
+/* MAGIC BUTTON ;-) */
+
+/* CUSTOMIZE BUTTON EFFECT HERE */
+$glow-line-color: $success;
+$glow-line-thickness: 2px;
+$glow-blur-color: $success;
+$glow-blur-size: 10px;
+$animation-speed: 1700ms;
+/* do not changesize meant for calculations */
+$c-offset: 60px;
+
+.glow-effect {
+    position: relative;
+}
+
+.glow-container {
+    pointer-events: none;
+    position: absolute;
+    inset: calc($c-offset / -2);
+    width: calc(100% + $c-offset);
+    height: calc(100% + $c-offset);
+    opacity: 0;
+}
+
+.glow-blur,
+.glow-line {
+    width:  calc(100% - $c-offset);
+    height:  calc(100% - $c-offset);
+    x: calc($c-offset / 2);
+    y: calc($c-offset / 2);
+    fill:transparent;
+    stroke-width: 10px;
+    stroke-dasharray: 80px 50px;
+}
+
+.glow-line {
+    stroke: $glow-line-color;
+    stroke-width: $glow-line-thickness;
+}
+
+.glow-blur {
+    filter: blur($glow-blur-size);
+    stroke: $glow-blur-color;
+    stroke-width: $glow-blur-size;
+}
+
+.glow-effect:is(:hover, :focus) :is(.glow-line, .glow-blur) {
+    stroke-dashoffset: -200px;
+    transition: stroke-dashoffset $animation-speed;
+}
+
+.glow-effect:is(:hover, :focus) .glow-container {
+    animation: glow-visibility $animation-speed;
+}
+
+@keyframes glow-visibility {
+    0%, 100% { opacity: 0 }
+    25%, 75% { opacity: 0.5 }
+    50% { opacity: 1 }
+}

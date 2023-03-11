@@ -1,0 +1,64 @@
+.c-services {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.c-service {
+    width: clamp(20rem, 30%, 40%);
+    padding: 1.5rem;
+    background: radial-gradient(farthest-corner at 75% 25%, transparent, $secondary);
+    background-color: #FFFAF622;
+    background-size: 200% 200%;
+    border-radius: 1rem;
+    border: 1px solid transparent;
+    background-position:0% 50%;
+    transition: all 300ms;
+
+    &:hover{
+        background-color: #FFFAF633;
+        border: 1px solid $light;
+        background-position:100% 300%;
+        transform: scale(1.02);
+        box-shadow: 0 5px 20px 0 $dark;
+    }
+}
+
+.service-icon {
+    max-width: clamp(32px, 80%, 128px);
+    height: auto;
+    border-radius: 1rem;
+}
+
+.text-detail {
+    color: $success;
+}
+
+.normal{
+    color: $light!important;
+}
+
+.icon-color {
+    color: $light;
+}
+
+.price-tag {
+    color: $primary;
+}
+
+.table-title {
+    color: $primary;
+}
+
+.table-warning {
+    border-color: $primary;
+    border-width: 3px;
+}
+
+/* FIXED BACKGROUND PARAGRAPH */
+.c-service-p {
+    background-image: url("../images/services.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
