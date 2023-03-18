@@ -1,6 +1,10 @@
 
 /* GENERAL TWEAKS */
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: $secondary;
     background: $font-secondary;

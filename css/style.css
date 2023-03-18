@@ -1,4 +1,8 @@
 /* GENERAL TWEAKS */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #14213D;
   background: "Turret Road", cursive;
