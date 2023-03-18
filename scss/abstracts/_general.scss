@@ -141,3 +141,12 @@ footer{
 
 }
 
+.parallax {
+    background-size:auto;
+    background-color: $dark;
+
+    p {
+        text-shadow: 0px 0px 3px $dark;
+    }
+}
+
