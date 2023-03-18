@@ -152,6 +152,10 @@ footer h5 {
   mix-blend-mode: soft-light;
 }
 
+.carousel-caption h1, .carousel-caption p {
+  text-shadow: 0px 0px 5px #0A111F;
+}
+
 /* CAROUSEL ANIM */
 .carousel-inner .carousel-item > img {
   object-fit: cover;
